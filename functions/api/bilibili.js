@@ -26,7 +26,7 @@ function getMixinKey(orig) {
 }
 
 // 生成 WBI 签名参数
-function encWbi(params, imgKey, subKey) {
+async function encWbi(params, imgKey, subKey) {
   const mixinKey = getMixinKey(imgKey + subKey);
   const wts = Math.round(Date.now() / 1000);
   const sortedParams = Object.keys({ ...params, wts })
@@ -38,7 +38,7 @@ function encWbi(params, imgKey, subKey) {
   const query = Object.keys(sortedParams)
     .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(sortedParams[k])}`)
     .join('&');
-  const w_rid = (await import('crypto')).createHash('md5')
+  const w_rid = (await import('node:crypto')).createHash('md5')
     .update(query + mixinKey)
     .digest('hex');
   return { ...sortedParams, w_rid };
