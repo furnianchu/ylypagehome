@@ -39,6 +39,11 @@ export default function RootLayout({
         <meta name="referrer" content="no-referrer" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* 👇 新增：顶部施工提示横幅 */}
+        <div className="fixed top-0 left-0 right-0 z-50 bg-yellow-100 text-yellow-800 text-center py-3 px-4 text-sm font-medium border-b-2 border-yellow-400">
+          🚧 本站正在修建中，部分功能暂不可用，敬请期待！
+        </div>
+
         <div className="min-h-screen">
           {children}
           <CustomCursor />
@@ -48,3 +53,4 @@ export default function RootLayout({
     </html>
   )
 }
+
