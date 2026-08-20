@@ -7,5 +7,12 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "yueyuezidaidaixue.de5.net",
+      "custom_domain": true
+    }
+  ]
 }
+
