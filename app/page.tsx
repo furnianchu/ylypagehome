@@ -125,4 +125,4 @@ export default function Home() {
                         </div>
                       </div>
 
-                      <div className="bg-gradien
+<div className="bg-gradient-to-r from-pink-50 to-white px-4 py-2 flex items-center space-x-4 border-b border-pink-100">
