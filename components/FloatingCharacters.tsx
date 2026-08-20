@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// 原神 / 崩坏：星穹铁道 / 绝区零 角色名池
 const CHARACTERS = [
   '钟离', '胡桃', '雷电将军', '温迪', '可莉',
   '甘雨', '魈', '神里绫华', '枫原万叶', '夜兰',
@@ -13,7 +12,6 @@ const CHARACTERS = [
   '比利', '安比', '妮可', '珂蕾妲', '露西',
 ]
 
-// 每个角色一个配色
 const COLORS = [
   '#f87171', '#fb923c', '#fbbf24', '#a3e635', '#34d399',
   '#22d3ee', '#60a5fa', '#818cf8', '#a78bfa', '#e879f9',
@@ -67,7 +65,7 @@ export default function FloatingCharacters() {
       setTimeout(() => {
         setChars(prev => prev.filter(c => c.id !== newChar.id))
       }, (delay + duration) * 1000 + 500)
-    }, 1200)
+    }, 1500)
 
     return () => clearInterval(interval)
   }, [])
@@ -89,22 +87,11 @@ export default function FloatingCharacters() {
         {chars.map(char => (
           <motion.div
             key={char.id}
-            initial={{
-              y: '-20%',
-              opacity: 0,
-              filter: 'blur(0px)',
-              scale: 1,
-            }}
+            initial={{ y: '-20%', opacity: 0, filter: 'blur(0px)', scale: 1 }}
             animate={{
               y: '110%',
               opacity: [0, 1, 1, 0.6, 0],
-              filter: [
-                'blur(0px)',
-                'blur(0px)',
-                'blur(2px)',
-                'blur(6px)',
-                'blur(12px)',
-              ],
+              filter: ['blur(0px)', 'blur(0px)', 'blur(2px)', 'blur(6px)', 'blur(12px)'],
               scale: [1, 1, 0.95, 0.8, 0.5],
             }}
             transition={{
@@ -133,4 +120,3 @@ export default function FloatingCharacters() {
     </div>
   )
 }
-

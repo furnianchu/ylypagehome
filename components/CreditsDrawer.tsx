@@ -9,13 +9,12 @@ export interface Credit {
   emoji: string
 }
 
-// 👇 在这里改成你群里那几个人的名字
 const CREDITS: Credit[] = [
-  { name: '星野', title: '真寻酱第一大粉丝', emoji: '😨' },
-  { name: 'ZL12_Official', title: 'Bug 制造机', emoji: '🐱' },
-  { name: '██', title: '██████', emoji: '█' },
-  { name: '██', title: '█████', emoji: '█' },
-  { name: '██', title: '████', emoji: '█' },
+  { name: '张三', title: '首席摸鱼官', emoji: '🦊' },
+  { name: '李四', title: 'Bug 制造机', emoji: '🐱' },
+  { name: '王五', title: '深夜陪聊员', emoji: '🐼' },
+  { name: '赵六', title: '灵感赞助商', emoji: '🦝' },
+  { name: '孙七', title: '精神支柱', emoji: '🐺' },
 ]
 
 interface CreditsDrawerProps {
@@ -36,7 +35,6 @@ export default function CreditsDrawer({ open, onClose }: CreditsDrawerProps) {
     <AnimatePresence>
       {open && (
         <>
-          {/* 毛玻璃遮罩 */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -52,16 +50,11 @@ export default function CreditsDrawer({ open, onClose }: CreditsDrawerProps) {
             }}
           />
 
-          {/* 底部抽屉面板 */}
           <motion.div
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
-            transition={{
-              type: 'spring',
-              damping: 30,
-              stiffness: 300,
-            }}
+            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
             style={{
               position: 'fixed',
               bottom: 0,
@@ -77,30 +70,13 @@ export default function CreditsDrawer({ open, onClose }: CreditsDrawerProps) {
               boxShadow: '0 -8px 32px rgba(0,0,0,0.4)',
             }}
           >
-            {/* 顶部拖拽条 */}
-            <div
-              style={{
-                width: '48px',
-                height: '4px',
-                background: '#ffffff33',
-                borderRadius: '2px',
-                margin: '0 auto 24px',
-              }}
-            />
+            <div style={{ width: '48px', height: '4px', background: '#ffffff33', borderRadius: '2px', margin: '0 auto 24px' }} />
 
-            {/* 标题 */}
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              style={{
-                textAlign: 'center',
-                fontSize: '28px',
-                fontWeight: 800,
-                color: '#fff',
-                marginBottom: '8px',
-                letterSpacing: '2px',
-              }}
+              style={{ textAlign: 'center', fontSize: '28px', fontWeight: 800, color: '#fff', marginBottom: '8px', letterSpacing: '2px' }}
             >
               🎬 特殊参演
             </motion.h2>
@@ -109,29 +85,18 @@ export default function CreditsDrawer({ open, onClose }: CreditsDrawerProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.25 }}
-              style={{
-                textAlign: 'center',
-                color: '#ffffff66',
-                fontSize: '14px',
-                marginBottom: '32px',
-              }}
+              style={{ textAlign: 'center', color: '#ffffff66', fontSize: '14px', marginBottom: '32px' }}
             >
               — 感谢以下开发者陪我一起折腾 —
             </motion.p>
 
-            {/* 名单列表 */}
             <div style={{ maxWidth: '480px', margin: '0 auto' }}>
               {CREDITS.map((person, index) => (
                 <motion.div
                   key={person.name}
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{
-                    delay: 0.3 + index * 0.12,
-                    type: 'spring',
-                    damping: 20,
-                    stiffness: 200,
-                  }}
+                  transition={{ delay: 0.3 + index * 0.12, type: 'spring', damping: 20, stiffness: 200 }}
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -143,7 +108,6 @@ export default function CreditsDrawer({ open, onClose }: CreditsDrawerProps) {
                     border: '1px solid rgba(255,255,255,0.08)',
                   }}
                 >
-                  {/* 头像 */}
                   <div
                     style={{
                       width: '48px',
@@ -160,6 +124,33 @@ export default function CreditsDrawer({ open, onClose }: CreditsDrawerProps) {
                     {person.emoji}
                   </div>
 
-                  {/* 名字和头衔 */}
                   <div style={{ flex: 1 }}>
-                    <div
+                    <div style={{ color: '#fff', fontSize: '18px', fontWeight: 700, marginBottom: '2px' }}>
+                      {person.name}
+                    </div>
+                    <div style={{ color: '#ffffff88', fontSize: '13px' }}>
+                      {person.title}
+                    </div>
+                  </div>
+
+                  <div style={{ color: '#ffffff33', fontSize: '14px', fontFamily: 'monospace' }}>
+                    #{String(index + 1).padStart(2, '0')}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              style={{ textAlign: 'center', color: '#ffffff33', fontSize: '12px', marginTop: '24px' }}
+            >
+              点击空白处或按 ESC 关闭
+            </motion.div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  )
+}
