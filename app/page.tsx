@@ -1,12 +1,9 @@
+"use client";
 /** @format */
 
 import type { Metadata } from 'next';
 import { useEffect, useState } from 'react';
 
-export const metadata: Metadata = {
-  title: '月月子代代雪の草窝',
-  description: '个人专属空间',
-}
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());

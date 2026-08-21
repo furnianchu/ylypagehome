@@ -1,11 +1,35 @@
 'use client'
 import BackgroundWrapper from "@/components/BackgroundWrapper";
+nexport const metadata: Metadata = {
+  title: '月月子代代雪の草窝',
+  description: '个人专属空间',
+}
 
 import { useEffect, useState } from 'react'
+nexport const metadata: Metadata = {
+  title: '月月子代代雪の草窝',
+  description: '个人专属空间',
+}
 import { Geist, Geist_Mono } from "next/font/google"
+nexport const metadata: Metadata = {
+  title: '月月子代代雪の草窝',
+  description: '个人专属空间',
+}
 import './globals.css'
+nexport const metadata: Metadata = {
+  title: '月月子代代雪の草窝',
+  description: '个人专属空间',
+}
 import CustomCursor from '@/components/CustomCursor'
+nexport const metadata: Metadata = {
+  title: '月月子代代雪の草窝',
+  description: '个人专属空间',
+}
 import MusicPlayer from '@/components/MusicPlayer'
+nexport const metadata: Metadata = {
+  title: '月月子代代雪の草窝',
+  description: '个人专属空间',
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
