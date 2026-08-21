@@ -86,9 +86,42 @@ body {
     body { padding: 12px; }
     .title { font-size: 22px; }
 }
+
+/* === 飘落特效 CSS === */
+.falling-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+.falling-char {
+    position: absolute;
+    top: -60px;
+    font-weight: bold;
+    text-shadow: 0 0 8px currentColor;
+    animation: fall linear forwards;
+    user-select: none;
+}
+.color-pink { color: #ff69b4; }
+.color-blue { color: #00bfff; }
+.color-gold { color: #ffd700; }
+.color-green { color: #7cfc00; }
+.color-purple { color: #da70d6; }
+.color-cyan { color: #00ffff; }
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    85% { opacity: 0.6; }
+    100% { transform: translateY(calc(var(--fall-distance) * 0.78)) rotate(720deg); opacity: 0; }
+}
 </style>
 </head>
 <body>
+
+<!-- 飘落特效容器 -->
+<div class="falling-container" id="snow-container"></div>
 
 <div class="avatar-block">
     <img src="https://files.catbox.moe/your-avatar-image.png" alt="头像">
@@ -133,11 +166,49 @@ body {
 </div>
 
 <script>
+// 时间更新（原有）
 function updateTime() {
     document.getElementById("datetime").innerText = new Date().toLocaleString();
 }
 setInterval(updateTime, 1000);
 updateTime();
+
+// === 飘落特效 JS ===
+const names = [
+    "荧","空","雷电将军","胡桃","甘雨","神里绫华","纳西妲","芙宁娜","钟离","温迪","刻晴","可莉","魈","迪卢克","七七",
+    "姬子","布洛妮娅","希儿","银狼","卡芙卡","镜流","黄泉","砂金","飞霄","云璃","流萤","花火","真理医生",
+    "阿米娅","能天使","银灰","陈","煌","史尔特尔","Mon3tr","斯卡蒂","浊心斯卡蒂","伊芙利特",
+    "企业","赤城","加贺","贝尔法斯特","光辉","独角兽","萨拉托加",
+    "日富美","星野","砂狼白子","一之濑未来","小鸟游星野","天童爱丽丝"
+];
+
+const container = document.getElementById('snow-container');
+const viewportHeight = window.innerHeight;
+document.documentElement.style.setProperty('--fall-distance', `${viewportHeight}px`);
+
+function createFallingName() {
+    const name = names[Math.floor(Math.random() * names.length)];
+    for (let i = 0; i < name.length; i++) {
+        const char = document.createElement('div');
+        char.className = 'falling-char';
+        char.textContent = name[i];
+        char.style.left = Math.random() * 96 + 2 + '%';
+        const fontSize = Math.random() * 14 + 14;
+        char.style.fontSize = fontSize + 'px';
+        const colors = ['color-pink','color-blue','color-gold','color-green','color-purple','color-cyan'];
+        char.classList.add(colors[Math.floor(Math.random() * colors.length)]);
+        const duration = Math.random() * 8 + 6;
+        char.style.animationDuration = duration + 's';
+        char.style.animationDelay = Math.random() * 1.5 + 's';
+        container.appendChild(char);
+        setTimeout(() => char.remove(), (duration + 2) * 1000);
+    }
+}
+
+// 初始生成一批
+for (let i = 0; i < 8; i++) setTimeout(createFallingName, i * 350);
+// 持续生成
+setInterval(createFallingName, Math.random() * 2100 + 900);
 </script>
 </body>
 </html>
