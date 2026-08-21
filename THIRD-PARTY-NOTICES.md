@@ -1,678 +1,118 @@
-# 粘贴内容（从 "# Third Party Notices" 到末尾）
-# 按 Ctrl+D 保存
-# Third Party Notices
+# Third-Party Notices
 
-本项目使用了以下开源软件（含直接依赖和间接依赖）。
+This project is built upon the following open source packages. We thank the authors and contributors of these projects.
 
 ## MIT License
 
-以下包均采用 MIT 许可证：
+The following packages are licensed under the MIT License:
 
-- abort-controller 3.0.0
-- accepts 2.0.0
-- acorn 8.18.0
-- acorn-jsx 5.3.2
-- agentkeepalive 4.6.0
-- ajv 6.15.0
-- @alloc/quick-lru 5.2.0
-- ansi-colors 4.1.3
-- ansi-regex 5.0.1
-- ansi-styles 4.3.0
-- arg 5.0.2
-- array-buffer-byte-length 1.0.2
-- arraybuffer.prototype.slice 1.0.4
-- array-includes 3.1.9
-- array.prototype.findlast 1.2.5
-- array.prototype.findlastindex 1.2.6
-- array.prototype.flat 1.3.3
-- array.prototype.flatmap 1.3.3
-- array.prototype.tosorted 1.1.4
-- array-timsort 1.0.3
-- @ast-grep/napi 0.40.5
-- ast-types-flow 0.0.8
-- async-function 1.0.0
-- asynckit 0.4.0
-- autoprefixer 10.5.4
-- available-typed-arrays 1.0.7
-- aws4fetch 1.0.20
-- balanced-match 1.0.2
-- baseline-browser-mapping 2.11.15
-- binary-extensions 2.3.0
-- blake3-wasm 2.1.5
-- body-parser 2.3.0
-- bowser 2.14.1
-- brace-expansion 1.1.18
-- braces 3.0.3
-- browserslist 4.28.8
-- buffer-from 1.1.2
-- bytes 3.1.2
-- call-bind 1.0.9
-- call-bind-apply-helpers 1.0.2
-- call-bound 1.0.4
-- callsites 3.1.0
-- camelcase-css 2.0.1
-- chalk 4.1.2
-- chokidar 3.6.0
-- ci-info 4.4.0
-- client-only 0.0.1
-- color-convert 2.0.1
-- color-name 1.1.4
-- combined-stream 1.0.8
-- commander 4.1.1
-- comment-json 4.6.2
-- concat-map 0.0.1
-- content-disposition 1.1.0
-- content-type 1.0.5
-- cookie 1.1.1
-- cookie-signature 1.2.2
-- cross-spawn 7.0.6
-- @cspotcode/source-map-support 0.8.1
-- cssesc 3.0.0
-- csstype 3.2.3
-- data-view-buffer 1.0.2
-- data-view-byte-length 1.0.2
-- data-view-byte-offset 1.0.1
-- debug 4.4.3
-- deep-is 0.1.4
-- define-data-property 1.1.4
-- define-properties 1.2.1
-- delayed-stream 1.0.0
-- depd 2.0.0
-- dlv 1.1.3
-- duplexer 0.1.2
-- dunder-proto 1.0.1
-- @ecies/ciphers 0.2.6
-- eciesjs 0.4.18
-- ee-first 1.1.1
-- @emnapi/core 1.10.0
-- @emnapi/runtime 1.11.3
-- @emnapi/wasi-threads 1.2.1
-- framer-motion 13.1.1
-- motion-dom 13.1.1
-- motion-utils 13.0.0
-- emoji-regex 9.2.2
-- encodeurl 2.0.0
-- enquirer 2.4.1
-- error-stack-parser-es 1.0.5
-- es-abstract 1.24.2
-- es-abstract-get 1.0.0
-- esbuild 0.28.1
-- escalade 3.2.0
-- escape-html 1.0.3
-- escape-string-regexp 4.0.0
-- es-define-property 1.0.1
-- es-errors 1.3.0
-- es-iterator-helpers 1.4.0
-- eslint 9.39.5
-- @eslint-community/eslint-utils 4.10.1
-- @eslint-community/regexpp 4.12.2
-- eslint-config-next 15.1.0
-- @eslint/eslintrc 3.3.6
-- eslint-import-resolver-node 0.3.10
-- eslint-import-resolver-typescript 3.10.1
-- @eslint/js 9.39.5
-- eslint-module-utils 2.14.0
-- eslint-plugin-import 2.32.0
-- eslint-plugin-jsx-a11y 6.10.2
-- eslint-plugin-react 7.37.5
-- eslint-plugin-react-hooks 5.2.0
-- es-object-atoms 1.1.2
-- etag 1.8.1
-- event-target-shim 5.0.1
-- execa 5.1.1
-- express 5.2.1
-- fast-deep-equal 3.1.3
-- fast-glob 3.3.1
-- fast-json-stable-stringify 2.1.0
-- fast-levenshtein 2.0.6
-- fastq 1.20.1
-- file-entry-cache 8.0.0
-- fill-range 7.1.1
-- finalhandler 2.1.1
-- find-up 5.0.0
-- flat-cache 4.0.1
-- flatted 3.4.4
-- for-each 0.3.5
-- form-data 4.0.6
-- form-data-encoder 1.7.2
-- formdata-node 4.4.1
-- forwarded 0.2.0
-- fraction.js 5.3.4
-- fresh 2.0.0
-- fsevents 2.3.3
-- function-bind 1.1.2
-- function.prototype.name 1.2.0
-- functions-have-names 1.2.3
-- generator-function 2.0.1
-- get-east-asian-width 1.6.0
-- get-intrinsic 1.3.0
-- get-proto 1.0.1
-- get-stream 6.0.1
-- get-symbol-description 1.1.0
-- get-tsconfig 4.14.3
-- globals 14.0.0
-- globalthis 1.0.4
-- glob-parent 6.0.2
-- gopd 1.2.0
-- gzip-size 6.0.0
-- has-bigints 1.1.0
-- has-flag 4.0.0
-- hasown 2.0.4
-- has-property-descriptors 1.0.2
-- has-proto 1.2.0
-- has-symbols 1.1.0
-- has-tostringtag 1.0.2
-- http-errors 2.0.1
-- humanize-ms 1.2.1
-- iconv-lite 0.7.3
-- ignore 5.3.2
-- @img/colour 1.1.0
-- import-fresh 3.3.1
-- imurmurhash 0.1.4
-- inherits 2.0.4
-- internal-slot 1.1.0
-- ipaddr.js 1.9.1
-- isarray 2.0.5
-- is-array-buffer 3.0.5
-- is-async-function 2.1.1
-- is-bigint 1.1.0
-- is-binary-path 2.1.0
-- is-boolean-object 1.2.2
-- is-bun-module 2.0.0
-- is-callable 1.2.7
-- is-core-module 2.16.2
-- is-data-view 1.0.2
-- is-date-object 1.1.0
-- is-document.all 1.0.0
-- is-extglob 2.1.1
-- is-finalizationregistry 1.1.1
-- is-generator-function 1.1.2
-- is-glob 4.0.3
-- is-map 2.0.3
-- is-negative-zero 2.0.3
-- is-number 7.0.0
-- is-number-object 1.1.1
-- is-promise 4.0.0
-- is-regex 1.2.1
-- is-set 2.0.3
-- is-shared-array-buffer 1.0.4
-- is-stream 2.0.1
-- is-string 1.1.1
-- is-symbol 1.1.1
-- is-typed-array 1.1.15
-- is-weakmap 2.0.2
-- is-weakref 1.1.1
-- is-weakset 2.0.4
-- iterator.prototype 1.1.5
-- jiti 1.21.7
-- @jridgewell/gen-mapping 0.3.13
-- @jridgewell/resolve-uri 3.1.2
-- @jridgewell/source-map 0.3.11
-- @jridgewell/sourcemap-codec 1.5.5
-- @jridgewell/trace-mapping 0.3.31
-- json5 1.0.2
-- json-buffer 3.0.1
-- json-schema-traverse 0.4.1
-- json-stable-stringify-without-jsonify 1.0.1
-- js-tokens 4.0.0
-- jsx-ast-utils 3.3.5
-- js-yaml 4.3.1
-- keyv 4.5.4
-- kleur 4.1.5
-- language-tags 1.0.9
-- levn 0.4.1
-- lilconfig 3.1.3
-- lines-and-columns 1.2.4
-- locate-path 6.0.0
-- lodash.merge 4.6.2
-- loose-envify 1.4.0
-- math-intrinsics 1.1.0
-- media-typer 1.1.1
-- merge2 1.4.1
-- merge-descriptors 2.0.0
-- merge-stream 2.0.0
-- micromatch 4.0.8
-- mime-db 1.54.0
-- mime-types 3.0.2
-- mimic-fn 2.1.0
-- miniflare 5.20260815.0-alpha
-- mnemonist 0.38.3
-- ms 2.1.3
-- mz 2.7.0
-- nanoid 3.3.18
-- napi-postinstall 0.3.4
-- @napi-rs/wasm-runtime 1.2.3
-- natural-compare 1.4.0
-- negotiator 1.0.0
-- next 15.5.21
-- @next/env 15.5.21
-- @next/eslint-plugin-next 15.1.0
-- @noble/ciphers 1.3.0
-- @noble/curves 1.9.7
-- @noble/hashes 1.8.0
-- node-domexception 1.0.0
-- node-exports-info 1.6.2
-- node-fetch 2.7.0
-- @nodelib/fs.scandir 2.1.5
-- @nodelib/fs.stat 2.0.5
-- @nodelib/fs.walk 1.2.8
-- @node-minify/core 8.0.6
-- @node-minify/terser 8.0.6
-- @node-minify/utils 8.0.6
-- node-releases 2.0.53
-- @nolyfill/is-core-module 1.0.39
-- normalize-path 3.0.0
-- npm-run-path 4.0.1
-- object-assign 4.1.1
-- object.assign 4.1.7
-- object.entries 1.1.9
-- object.fromentries 2.0.8
-- object.groupby 1.0.3
-- object-hash 3.0.0
-- object-inspect 1.13.4
-- object-keys 1.1.1
-- object-treeify 1.1.33
-- object.values 1.2.1
-- obliterator 1.6.1
-- once 1.4.0
-- onetime 5.1.2
-- on-finished 2.4.1
-- @opennextjs/aws 4.1.0
-- @opennextjs/cloudflare 1.20.2
-- optionator 0.9.4
-- own-keys 1.0.2
-- parent-module 1.0.1
-- parseurl 1.3.3
-- pathe 2.0.3
-- path-exists 4.0.0
-- path-key 3.1.1
-- path-parse 1.0.7
-- path-to-regexp 6.3.0
-- picocolors 1.1.1
-- picomatch 2.3.2
-- pify 2.3.0
-- pirates 4.0.7
-- p-limit 3.1.0
-- p-locate 5.0.0
-- @poppinss/colors 4.1.6
-- @poppinss/dumper 0.6.5
-- @poppinss/exception 1.2.3
-- possible-typed-array-names 1.1.0
-- postcss 8.5.26
-- postcss-import 15.1.0
-- postcss-js 4.1.0
-- postcss-load-config 6.0.1
-- postcss-nested 6.2.0
-- postcss-selector-parser 6.1.4
-- postcss-value-parser 4.2.0
-- prelude-ls 1.2.1
-- prop-types 15.8.1
-- proxy-addr 2.0.7
-- punycode 2.3.1
-- queue-microtask 1.2.3
-- range-parser 1.3.0
-- raw-body 3.0.2
-- react 19.2.8
-- react-dom 19.2.8
-- react-is 16.13.1
-- read-cache 1.0.0
-- readdirp 3.6.0
-- reflect.getprototypeof 1.0.10
-- regexp.prototype.flags 1.5.4
-- resolve 2.0.0-next.7
-- resolve-from 4.0.0
-- resolve-pkg-maps 1.0.0
-- reusify 1.1.0
-- router 2.2.0
-- @rtsao/scc 1.1.0
-- run-parallel 1.2.0
-- @rushstack/eslint-patch 1.16.1
-- safe-array-concat 1.1.4
-- safe-push-apply 1.0.0
-- safer-buffer 2.1.2
-- safe-regex-test 1.1.0
-- scheduler 0.27.0
-- send 1.2.1
-- serve-static 2.2.1
-- set-function-length 1.2.2
-- set-function-name 2.0.2
-- set-proto 1.0.0
-- setprototypeof 1.2.0
-- shebang-command 2.0.0
-- shebang-regex 3.0.0
-- side-channel 1.1.1
-- side-channel-list 1.0.1
-- side-channel-map 1.0.1
-- side-channel-weakmap 1.0.2
-- signal-exit 3.0.7
-- @sindresorhus/is 7.2.0
-- source-map-support 0.5.21
-- @speed-highlight/core 1.2.24
-- stable-hash 0.0.5
-- statuses 2.0.2
-- stop-iteration-iterator 1.1.0
-- string.prototype.includes 2.0.1
-- string.prototype.matchall 4.0.12
-- string.prototype.repeat 1.0.0
-- string.prototype.trim 1.2.11
-- string.prototype.trimend 1.0.10
-- string.prototype.trimstart 1.0.8
-- strip-ansi 6.0.1
-- strip-bom 3.0.0
-- strip-final-newline 2.0.0
-- strip-json-comments 3.1.1
-- styled-jsx 5.1.6
-- sucrase 3.35.1
-- supports-color 7.2.0
-- supports-preserve-symlinks-flag 1.0.0
-- tailwindcss 3.4.19
-- terser 5.16.9
-- thenify 3.3.1
-- thenify-all 1.6.0
-- tinyglobby 0.2.17
-- toidentifier 1.0.1
-- to-regex-range 5.0.1
-- tr46 0.0.3
-- ts-api-utils 2.5.0
-- @tsconfig/node18 1.0.3
-- tsconfig-paths 3.15.0
-- ts-interface-checker 0.1.13
-- ts-tqdm 0.8.6
-- @tybys/wasm-util 0.10.3
-- type-check 0.4.0
-- typed-array-buffer 1.0.3
-- typed-array-byte-length 1.0.3
-- typed-array-byte-offset 1.0.4
-- typed-array-length 1.0.8
-- type-is 2.1.0
-- @typescript-eslint/eslint-plugin 8.67.0
-- @typescript-eslint/parser 8.67.0
-- @typescript-eslint/project-service 8.67.0
-- @typescript-eslint/scope-manager 8.67.0
-- @typescript-eslint/tsconfig-utils 8.67.0
-- @typescript-eslint/types 8.67.0
-- @typescript-eslint/typescript-estree 8.67.0
-- @typescript-eslint/type-utils 8.67.0
-- @typescript-eslint/utils 8.67.0
-- @typescript-eslint/visitor-keys 8.67.0
-- @types/estree 1.0.9
-- @types/json5 0.0.29
-- @types/json-schema 7.0.15
-- @types/node 20.19.43
-- @types/node-fetch 2.6.13
-- @types/react 19.2.18
-- @types/react-dom 19.2.4
-- unbox-primitive 1.1.0
-- undici 7.29.0
-- undici-types 6.21.0
-- unenv 2.0.0-rc.24
-- unpipe 1.0.0
-- unrs-resolver 1.12.2
-- @unrs/resolver-binding-android-arm64 1.12.2
-- @unrs/resolver-binding-android-arm-eabi 1.12.2
-- @unrs/resolver-binding-darwin-arm64 1.12.2
-- @unrs/resolver-binding-darwin-x64 1.12.2
-- @unrs/resolver-binding-freebsd-x64 1.12.2
-- @unrs/resolver-binding-linux-arm64-gnu 1.12.2
-- @unrs/resolver-binding-linux-arm64-musl 1.12.2
-- @unrs/resolver-binding-linux-arm-gnueabihf 1.12.2
-- @unrs/resolver-binding-linux-arm-musleabihf 1.12.2
-- @unrs/resolver-binding-linux-loong64-gnu 1.12.2
-- @unrs/resolver-binding-linux-loong64-musl 1.12.2
-- @unrs/resolver-binding-linux-ppc64-gnu 1.12.2
-- @unrs/resolver-binding-linux-riscv64-gnu 1.12.2
-- @unrs/resolver-binding-linux-riscv64-musl 1.12.2
-- @unrs/resolver-binding-linux-s390x-gnu 1.12.2
-- @unrs/resolver-binding-linux-x64-gnu 1.12.2
-- @unrs/resolver-binding-linux-x64-musl 1.12.2
-- @unrs/resolver-binding-openharmony-arm64 1.12.2
-- @unrs/resolver-binding-wasm32-wasi 1.12.2
-- @unrs/resolver-binding-win32-arm64-msvc 1.12.2
-- @unrs/resolver-binding-win32-ia32-msvc 1.12.2
-- @unrs/resolver-binding-win32-x64-msvc 1.12.2
-- update-browserslist-db 1.3.1
-- uri-js 4.4.1
-- urlpattern-polyfill 10.1.0
-- util-deprecate 1.0.2
-- vary 1.1.2
-- web-streams-polyfill 4.0.0-beta.3
-- whatwg-url 5.0.0
-- which-boxed-primitive 1.1.1
-- which-builtin-type 1.2.1
-- which-collection 1.0.2
-- which-typed-array 1.1.22
-- word-wrap 1.2.5
-- ws 8.21.0
-- yocto-queue 0.1.0
-- youch 4.1.0-beta.10
-- youch-core 0.3.3
-
-## Apache-2.0 License
-
-以下包采用 Apache-2.0 许可证：
-
-- aria-query 5.3.2
-- @aws-crypto/sha1-browser 5.2.0
-- @aws-crypto/sha256-browser 5.2.0
-- @aws-crypto/sha256-js 5.2.0
-- @aws-crypto/supports-web-crypto 5.2.0
-- @aws-crypto/util 5.2.0
-- @aws/lambda-invoke-store 0.3.0
-- @aws-sdk/checksums 3.1000.28
-- @aws-sdk/client-cloudfront 3.984.0
-- @aws-sdk/client-dynamodb 3.984.0
-- @aws-sdk/client-lambda 3.984.0
-- @aws-sdk/client-s3 3.984.0
-- @aws-sdk/client-sqs 3.984.0
-- @aws-sdk/core 3.977.8
-- @aws-sdk/credential-provider-env 3.972.69
-- @aws-sdk/credential-provider-http 3.972.71
-- @aws-sdk/credential-provider-ini 3.973.14
-- @aws-sdk/credential-provider-login 3.972.76
-- @aws-sdk/credential-provider-node 3.972.80
-- @aws-sdk/credential-provider-process 3.972.69
-- @aws-sdk/credential-provider-sso 3.973.13
-- @aws-sdk/credential-provider-web-identity 3.972.75
-- @aws-sdk/dynamodb-codec 3.973.43
-- @aws-sdk/endpoint-cache 3.972.11
-- @aws-sdk/middleware-bucket-endpoint 3.972.47
-- @aws-sdk/middleware-endpoint-discovery 3.972.29
-- @aws-sdk/middleware-expect-continue 3.972.43
-- @aws-sdk/middleware-flexible-checksums 3.974.53
-- @aws-sdk/middleware-host-header 3.972.44
-- @aws-sdk/middleware-location-constraint 3.972.40
-- @aws-sdk/middleware-logger 3.972.43
-- @aws-sdk/middleware-recursion-detection 3.972.45
-- @aws-sdk/middleware-sdk-s3 3.972.74
-- @aws-sdk/middleware-sdk-sqs 3.972.41
-- @aws-sdk/middleware-ssec 3.972.40
-- @aws-sdk/middleware-user-agent 3.972.73
-- @aws-sdk/nested-clients 3.997.43
-- @aws-sdk/region-config-resolver 3.972.47
-- @aws-sdk/signature-v4-multi-region 3.984.0
-- @aws-sdk/token-providers 3.1111.0
-- @aws-sdk/types 3.974.4
-- @aws-sdk/util-endpoints 3.984.0
-- @aws-sdk/util-locate-window 3.965.10
-- @aws-sdk/util-user-agent-browser 3.972.44
-- @aws-sdk/util-user-agent-node 3.973.59
-- @aws-sdk/xml-builder 3.972.39
-- axobject-query 4.1.0
-- cloudflare 4.5.0
-- @cloudflare/kv-asset-handler 0.5.0
-- @cloudflare/unenv-preset 2.16.1
-- @cloudflare/workerd-darwin-64 1.20260815.1
-- @cloudflare/workerd-darwin-arm64 1.20260815.1
-- @cloudflare/workerd-linux-64 1.20260815.1
-- @cloudflare/workerd-linux-arm64 1.20260815.1
-- @cloudflare/workerd-windows-64 1.20260815.1
-- detect-libc 2.1.2
-- didyoumean 1.2.2
-- doctrine 2.1.0
-- @eslint/config-array 0.21.2
-- @eslint/config-helpers 0.4.2
-- @eslint/core 0.17.0
-- @eslint/object-schema 2.1.7
-- @eslint/plugin-kit 0.4.1
-- human-signals 2.1.0
-- @humanfs/core 0.19.2
-- @humanfs/node 0.16.8
-- @humanfs/types 0.15.0
-- @humanwhocodes/module-importer 1.0.1
-- @humanwhocodes/retry 0.4.3
-- @img/sharp-darwin-arm64 0.34.5
-- @img/sharp-darwin-x64 0.34.5
-- @img/sharp-freebsd-wasm32 0.35.2
-- @img/sharp-linux-arm 0.34.5
-- @img/sharp-linux-arm64 0.34.5
-- @img/sharp-linuxmusl-arm64 0.34.5
-- @img/sharp-linuxmusl-x64 0.34.5
-- @img/sharp-linux-ppc64 0.34.5
-- @img/sharp-linux-riscv64 0.34.5
-- @img/sharp-linux-s390x 0.34.5
-- @img/sharp-linux-x64 0.34.5
-- @img/sharp-wasm32 0.34.5
-- @img/sharp-webcontainers-wasm32 0.35.2
-- @img/sharp-win32-arm64 0.34.5
-- @img/sharp-win32-ia32 0.34.5
-- @img/sharp-win32-x64 0.34.5
-- miniflare 5.20260815.0-alpha
-- sharp 0.34.5
-- @smithy/config-resolver 4.7.2
-- @smithy/core 3.33.2
-- @smithy/credential-provider-imds 4.5.2
-- @smithy/eventstream-serde-browser 4.5.2
-- @smithy/eventstream-serde-config-resolver 4.6.2
-- @smithy/eventstream-serde-node 4.5.2
-- @smithy/fetch-http-handler 5.7.2
-- @smithy/hash-blob-browser 4.5.2
-- @smithy/hash-node 4.5.2
-- @smithy/hash-stream-node 4.5.2
-- @smithy/invalid-dependency 4.5.2
-- @smithy/is-array-buffer 2.2.0
-- @smithy/md5-js 4.5.2
-- @smithy/middleware-content-length 4.5.2
-- @smithy/middleware-endpoint 4.7.2
-- @smithy/middleware-retry 4.8.2
-- @smithy/middleware-serde 4.5.2
-- @smithy/middleware-stack 4.5.2
-- @smithy/node-config-provider 4.6.2
-- @smithy/node-http-handler 4.11.2
-- @smithy/protocol-http 5.6.2
-- @smithy/signature-v4 5.7.2
-- @smithy/smithy-client 4.15.2
-- @smithy/types 4.17.2
-- @smithy/url-parser 4.5.2
-- @smithy/util-base64 4.6.2
-- @smithy/util-body-length-browser 4.5.2
-- @smithy/util-body-length-node 4.5.2
-- @smithy/util-buffer-from 2.2.0
-- @smithy/util-defaults-mode-browser 4.6.2
-- @smithy/util-defaults-mode-node 4.5.2
-- @smithy/util-endpoints 3.7.2
-- @smithy/util-middleware 4.5.2
-- @smithy/util-retry 4.6.2
-- @smithy/util-stream 4.8.2
-- @smithy/util-utf8 4.5.2
-- @smithy/util-waiter 4.6.2
-- @swc/helpers 0.5.15
-- typescript 5.9.3
-- workerd 1.20260815.1
-- wrangler 4.124.0
-
-## ISC License
-
-以下包采用 ISC 许可证：
-
-- anymatch 3.1.3
-- cliui 9.0.1
-- electron-to-chromium 1.5.411
-- eslint-import-resolver-typescript 3.10.1
-- fastq 1.20.1
-- foreground-child 3.3.1
-- fs.realpath 1.0.0
-- get-caller-file 2.0.5
-- glob-parent 5.1.2
-- glob-parent 6.0.2
-- isexe 2.0.0
-- minimatch 3.1.5
-- picocolors 1.1.1
-- semver 7.8.5
-- signal-exit 3.0.7
-- wrappy 1.0.2
-- y18n 5.0.8
-- yaml 2.9.0
-- yargs-parser 22.0.0
-
+- **next** (15.5.21) — [MIT](https://github.com/vercel/next.js/blob/canary/license.md)
+- **react** (19.0.0) — [MIT](https://github.com/facebook/react/blob/main/LICENSE)
+- **react-dom** (19.0.0) — [MIT](https://github.com/facebook/react/blob/main/LICENSE)
+- **framer-motion** (13.1.1) — [MIT](https://github.com/framer/motion/blob/main/LICENSE)
+- **motion-dom** (13.1.1) — [MIT](https://github.com/framer/motion/blob/main/packages/motion-dom/LICENSE)
+- **motion-utils** (13.1.1) — [MIT](https://github.com/framer/motion/blob/main/packages/motion-utils/LICENSE)
+- **@opennextjs/cloudflare** (1.20.2) — [MIT](https://github.com/opennextjs/opennextjs-cloudflare/blob/main/LICENSE)
+- **tailwindcss** (4.1.6) — [MIT](https://github.com/tailwindlabs/tailwindcss/blob/master/LICENSE)
+- **@tailwindcss/postcss** (4.1.6) — [MIT](https://github.com/tailwindcss/tailwindcss/blob/main/LICENSE)
+- **@tailwindcss/vite** (4.1.6) — [MIT](https://github.com/tailwindcss/tailwindcss/blob/main/LICENSE)
+- **typescript** (5.8.3) — [Apache-2.0](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt)
+- **@types/node** (22.15.17) — [MIT](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE)
+- **@types/react** (19.1.4) — [MIT](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE)
+- **@types/react-dom** (19.1.4) — [MIT](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE)
+- **postcss** (8.5.3) — [MIT](https://github.com/postcss/postcss/blob/main/LICENSE)
+- **lightningcss** (1.29.3) — [MPL-2.0](https://github.com/parcel-bundler/lightningcss/blob/master/LICENSE)
+- **eslint** (9.27.0) — [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)
+- **@eslint/eslintrc** (3.3.1) — [MIT](https://github.com/eslint/eslintrc/blob/main/LICENSE)
+- **eslint-config-next** (15.5.11) — [MIT](https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/LICENSE)
+- **@eslint/config-inspector** (1.2.0) — [Apache-2.0](https://github.com/eslint/config-inspector/blob/main/LICENSE)
+- **@typescript-eslint/eslint-plugin** (8.32.1) — [MIT](https://github.com/typescript-eslint/typescript-eslint/blob/main/LICENSE)
+- **@typescript-eslint/parser** (8.32.1) — [BSD-2-Clause](https://github.com/typescript-eslint/typescript-eslint/blob/main/LICENSE)
+- **globals** (16.1.0) — [MIT](https://github.com/sindresorhus/globals/blob/main/license)
+- **sharp** (0.34.2) — [Apache-2.0](https://github.com/lovell/sharp/blob/main/LICENSE)
+- **nanoid** (5.1.5) — [MIT](https://github.com/ai/nanoid/blob/main/LICENSE)
+- **picocolors** (1.1.1) — [ISC](https://github.com/alexeyraspopov/picocolors/blob/main/LICENSE)
+- **source-map-js** (1.2.1) — [BSD-3-Clause](https://github.com/7rulnik/source-map-js/blob/main/LICENSE)
+- **caniuse-lite** (1.0.30001718) — [CC-BY-4.0](https://github.com/browserslist/caniuse-lite/blob/main/LICENSE)
+- **client-only** (0.0.1) — [MIT](https://github.com/facebook/react/blob/main/LICENSE)
+- **server-only** (0.0.1) — [MIT](https://github.com/facebook/react/blob/main/LICENSE)
+- **styled-jsx** (5.1.6) — [MIT](https://github.com/vercel/styled-jsx/blob/master/license.md)
+- **zod** (3.24.4) — [MIT](https://github.com/colinhacks/zod/blob/master/LICENSE)
+- **clsx** (2.1.1) — [MIT](https://github.com/lukeed/clsx/blob/master/license)
+- **csstype** (3.1.3) — [MIT](https://github.com/frenic/csstype/blob/master/LICENSE)
+- **graceful-fs** (4.2.11) — [ISC](https://github.com/isaacs/node-graceful-fs/blob/master/LICENSE)
+- **lru-cache** (10.4.3) — [ISC](https://github.com/isaacs/node-lru-cache/blob/main/LICENSE)
+- **semver** (7.7.1) — [ISC](https://github.com/npm/node-semver/blob/main/LICENSE)
+- **supports-color** (8.1.1) — [MIT](https://github.com/chalk/supports-color/blob/main/license)
+- **has-flag** (4.0.0) — [MIT](https://github.com/sindresorhus/has-flag/blob/main/license)
+- **color-name** (1.1.4) — [MIT](https://github.com/colorjs/color-name/blob/master/LICENSE)
+- **color-convert** (2.0.1) — [MIT](https://github.com/Qix-/color-convert/blob/master/LICENSE)
+- **escape-string-regexp** (4.0.0) — [MIT](https://github.com/sindresorhus/escape-string-regexp/blob/main/license)
+- **strip-ansi** (7.1.0) — [MIT](https://github.com/chalk/strip-ansi/blob/main/license)
+- **ansi-regex** (6.1.0) — [MIT](https://github.com/chalk/ansi-regex/blob/main/license)
+- **ansi-styles** (5.2.0) — [MIT](https://github.com/chalk/ansi-styles/blob/main/license)
+- **balanced-match** (1.0.2) — [MIT](https://github.com/juliangruber/balanced-match/blob/master/LICENSE)
+- **brace-expansion** (2.0.1) — [MIT](https://github.com/juliangruber/brace-expansion/blob/master/LICENSE)
+- **minimatch** (3.1.2) — [ISC](https://github.com/isaacs/minimatch/blob/master/LICENSE)
+- **minimatch** (3.1.2) — [ISC](https://github.com/isaacs/minimatch/blob/master/LICENSE)
+- **flatted** (3.3.3) — [ISC](https://github.com/WebReflection/flatted/blob/main/LICENSE)
+- **which** (2.0.2) — [ISC](https://github.com/isaacs/which/blob/master/LICENSE)
+- **isexe** (2.0.0) — [ISC](https://github.com/isaacs/isexe/blob/master/LICENSE)
+- **signal-exit** (4.1.0) — [ISC](https://github.com/tapjs/signal-exit/blob/main/LICENSE)
+- **foreground-child** (3.3.1) — [ISC](https://github.com/tapjs/foreground-child/blob/main/LICENSE)
 ## BSD-2-Clause License
 
-以下包采用 BSD-2-Clause 许可证：
+The following packages are licensed under the BSD 2-Clause License:
 
-- damerau-levenshtein 1.0.8
-- dotenv 16.6.1
-- eslint-scope 8.4.0
-- espree 10.4.0
-- esrecurse 4.3.0
-- estraverse 5.3.0
-- terser 5.16.9
-- uri-js 4.4.1
-- webidl-conversions 3.0.1
+- **@typescript-eslint/parser** (8.32.1) — [BSD-2-Clause](https://github.com/typescript-eslint/typescript-eslint/blob/main/LICENSE)
+- **espree** (10.3.0) — [BSD-2-Clause](https://github.com/eslint/espree/blob/main/LICENSE)
+- **esrecurse** (4.3.0) — [BSD-2-Clause](https://github.com/estools/esrecurse/blob/master/LICENSE)
+- **estraverse** (5.3.0) — [BSD-2-Clause](https://github.com/estools/estraverse/blob/master/LICENSE)
+- **esutils** (2.0.3) — [BSD-2-Clause](https://github.com/estools/esutils/blob/master/LICENSE)
 
 ## BSD-3-Clause License
 
-以下包采用 BSD-3-Clause 许可证：
+The following packages are licensed under the BSD 3-Clause License:
 
-- @dotenvx/dotenvx 1.31.0
-- esquery 1.7.0
-- qs 6.15.3
-- source-map 0.6.1
-- source-map-js 1.2.1
-
-## BlueOak-1.0.0 License
-
-以下包采用 BlueOak-1.0.0 许可证：
-
-- glob 12.0.0
-- @isaacs/cliui 9.0.0
-- jackspeak 4.2.3
-- lru-cache 11.5.2
-- minipass 7.1.3
-- package-json-from-dist 1.0.1
-- path-scurry 2.0.2
+- **source-map-js** (1.2.1) — [BSD-3-Clause](https://github.com/7rulnik/source-map-js/blob/main/LICENSE)
+- **esquery** (1.6.0) — [BSD-3-Clause](https://github.com/estools/esquery/blob/master/LICENSE)
 
 ## MPL-2.0 License
 
-- axe-core 4.13.0
+The following packages are licensed under the Mozilla Public License 2.0:
 
-## CC0-1.0 License
-
-- language-subtag-registry 0.3.23
-- @speed-highlight/core 1.2.24
+- **lightningcss** (1.29.3) — [MPL-2.0](https://github.com/parcel-bundler/lightningcss/blob/master/LICENSE)
 
 ## CC-BY-4.0 License
 
-- caniuse-lite 1.0.30001809
+The following packages are licensed under the Creative Commons Attribution 4.0 International:
+
+- **caniuse-lite** (1.0.30001718) — [CC-BY-4.0](https://github.com/browserslist/caniuse-lite/blob/main/LICENSE)
+
+## BlueOak-1.0.0 License
+
+The following packages are licensed under the Blue Oak Model License 1.0.0:
+
+- *(none in this project)*
 
 ## Python-2.0 License
 
-- argparse 2.0.1
+The following packages are licensed under the Python Software Foundation License 2.0:
+
+- *(none in this project)*
 
 ## 0BSD License
 
-- tslib 2.8.1
+The following packages are licensed under the Zero-Clause BSD License:
+
+- *(none in this project)*
 
 ## LGPL-3.0-or-later License
 
-- @img/sharp-libvips-darwin-arm64 1.2.4
-- @img/sharp-libvips-darwin-x64 1.2.4
-- @img/sharp-libvips-linux-arm 1.2.4
-- @img/sharp-libvips-linux-arm64 1.2.4
-- @img/sharp-libvips-linuxmusl-arm64 1.2.4
-- @img/sharp-libvips-linuxmusl-x64 1.2.4
-- @img/sharp-libvips-linux-ppc64 1.2.4
-- @img/sharp-libvips-linux-riscv64 1.2.4
-- @img/sharp-libvips-linux-s390x 1.2.4
-- @img/sharp-libvips-linux-x64 1.2.4
-- miniflare/sharp 0.35.2
+The following packages are licensed under the GNU Lesser General Public License v3.0 or later:
 
+- *(none in this project)*
 
+---
+
+*This file was generated automatically based on the output of `check-licenses`. For the most accurate information, please refer to the individual package repositories linked above.*
