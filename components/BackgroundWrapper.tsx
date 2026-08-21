@@ -53,7 +53,7 @@ export default function BackgroundWrapper({ children }: { children: React.ReactN
         muted
         loop
         playsInline
-        className="fixed inset-0 w-full h-full object-cover -z-10"
+        className="fixed inset-0 w-full h-full object-cover -z-20"
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
