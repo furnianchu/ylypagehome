@@ -340,3 +340,23 @@ const [creditsOpen, setCreditsOpen] = useState(false)
     </div>
   )
 }
+
+<div className="mt-12 border-t border-gray-200 pt-6 pb-8 text-center text-xs text-gray-400">
+  <p className="mb-1">
+    本站基于 
+    <a href="https://github.com/vercel/next.js" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">Next.js</a>、
+    <a href="https://github.com/facebook/react" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">React</a>、
+    <a href="https://github.com/framer/motion" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">Framer Motion</a>、
+    <a href="https://github.com/opennextjs/opennextjs-cloudflare" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">OpenNext</a>、
+    <a href="https://github.com/tailwindlabs/tailwindcss" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>
+    等开源项目构建。
+  </p>
+  <p>
+    完整第三方许可证详见：
+    <a href="https://github.com/你的用户名/ylypagehome/blob/main/THIRD-PARTY-NOTICES.md" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">THIRD-PARTY-NOTICES.md</a>
+  </p>
+  <p className="mt-2">
+    本站源代码：
+    <a href="https://github.com/furnian/ylypagehome" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </p>
+</div>
