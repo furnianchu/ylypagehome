@@ -20,6 +20,9 @@ export default function Home() {
           <a href="#" className="hover:text-pink-300 transition">关于</a>
         </div>
       </nav>
+      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
+        <img src="/right-decoration.jpg" alt="Decoration" className="w-32 h-auto opacity-80 hover:opacity-100 transition-opacity" />
+      </div>
 
       {/* 中间内容区 */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 mt-20">
