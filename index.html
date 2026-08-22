@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>月月子代代雪</title>
+<title>辉夜の小窝</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: "Noto Sans SC", sans-serif;
-    background: url("https://files.catbox.moe/your-background-image.jpg") center/cover fixed;
+    background: #0a0a0a;
     min-height: 100vh;
     color: #fff;
     overflow-x: hidden;
     padding: 20px;
 }
+
 /* 毛玻璃卡片 */
 .card-glass {
     background: rgba(255, 255, 255, 0.08);
@@ -25,14 +26,16 @@ body {
     margin-bottom: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
+
 .section-title {
-    font-size: 16px;
+    font-size: 18px;
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     border-left: 3px solid #ff6b6b;
     padding-left: 10px;
-    font-weight: 600;
+    font-weight: 700;
 }
+
 .link-list a {
     display: block;
     color: #e0e0e0;
@@ -43,199 +46,261 @@ body {
     transition: all 0.2s;
     background: rgba(255,255,255,0.03);
 }
+
 .link-list a:hover {
     background: rgba(255,255,255,0.12);
     transform: translateX(4px);
 }
+
 .avatar-block {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 24px 0 16px;
 }
+
 .avatar-block img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.3);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    border: 2px solid rgba(255,255,255,0.25);
+    object-fit: cover;
 }
-.title {
-    font-size: 26px;
+
+.avatar-block h2 {
     margin-top: 10px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
-.desc {
-    font-size: 14px;
-    color: #ccc;
-    margin-top: 6px;
+
+.avatar-block p {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 4px;
 }
-.footer-card {
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 14px;
-    padding: 12px 16px;
-    border: 1px solid rgba(255,255,255,0.1);
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
-    color: #ddd;
-    margin-top: 20px;
-}
-@media (max-width: 480px) {
-    body { padding: 12px; }
-    .title { font-size: 22px; }
+    color: #ccc;
+    z-index: 999;
 }
 
-/* === 飘落特效 CSS === */
-.falling-container {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-.falling-char {
-    position: absolute;
-    top: -60px;
-    font-weight: bold;
-    text-shadow: 0 0 8px currentColor;
-    animation: fall linear forwards;
-    user-select: none;
-}
-.color-pink { color: #ff69b4; }
-.color-blue { color: #00bfff; }
-.color-gold { color: #ffd700; }
-.color-green { color: #7cfc00; }
-.color-purple { color: #da70d6; }
-.color-cyan { color: #00ffff; }
+.footer-bar span { opacity: 0.8; }
 
-@keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    85% { opacity: 0.6; }
-    100% { transform: translateY(calc(var(--fall-distance) * 0.78)) rotate(720deg); opacity: 0; }
-}
+/* 搭建提示弹窗 */
 .modal-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
-    z-index: 9999; display: flex; align-items: center; justify-content: center;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
 }
+
 .modal-box {
-    background: rgba(30,30,50,0.85); backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.15); border-radius: 20px;
-    padding: 30px 36px; text-align: center; color: #fff; max-width: 360px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.5); animation: popIn 0.3s ease-out;
+    background: rgba(255,255,255,0.09);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 36px 44px;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 42px rgba(0,0,0,0.45);
 }
-.modal-box .icon { font-size: 48px; margin-bottom: 12px; }
-.modal-box .msg { font-size: 16px; line-height: 1.6; color: #e0e0e0; margin-bottom: 20px; }
-.modal-box button {
-    background: linear-gradient(135deg,#ff69b4,#8a2be2); color: #fff; border: none;
-    padding: 10px 32px; border-radius: 30px; font-size: 15px; cursor: pointer;
-    transition: 0.2s;
+
+.modal-box h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 14px;
+    letter-spacing: 3px;
 }
-.modal-box button:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,105,180,0.5); }
-@keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+.modal-box p {
+    font-size: 15px;
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.modal-btn {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 10px 34px;
+    border-radius: 99px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+.modal-btn:hover { background: rgba(255,255,255,0.22); }
+
+/* 飘落特效 */
+.falling-name {
+    position: fixed;
+    top: -40px;
+    pointer-events: none;
+    white-space: nowrap;
+    font-weight: 300;
+    opacity: 0.85;
+    z-index: 1500;
+    animation: fallDown linear forwards;
+}
+
+@keyframes fallDown {
+    0% { transform: translateY(0); opacity: 0.95; }
+    70% { opacity: 0.35; }
+    100% { opacity: 0; }
+}
 </style>
 </head>
 <body>
 
-<!-- 飘落特效容器 -->
-<div class="falling-container" id="snow-container"></div>
-<div class="modal-overlay" id="welcomeModal">
+<!-- 搭建提示弹窗 -->
+<div id="welcomeModal" class="modal-overlay">
   <div class="modal-box">
-    <div class="icon">🚧</div>
-    <div class="msg">网站当前正在搭建中<br/>部分功能暂不可用，敬请期待！</div>
-    <button onclick="document.getElementById("welcomeModal").style.display="none"">我知道了</button>
+    <h3>✨ 辉夜の小窝</h3>
+    <p>网站当前正在搭建中<br/>部分功能暂不可用，敬请期待</p>
+    <button class="modal-btn" onclick="closeModal()">我知道了</button>
   </div>
 </div>
 
-<div class="avatar-block">
-    <img src="https://files.catbox.moe/your-avatar-image.png" alt="头像">
-    <h1 class="title">月月子代代雪</h1>
-    <p class="desc">热爱技术，热爱生活的探索者。这里是我的个人空间，分享一些编程笔记和生活日常。</p>
-</div>
+<div class="container">
 
-<!-- 星标项目 -->
-<div class="card-glass">
-    <div class="section-title">🌟 星标项目</div>
+  <!-- 头像区块 -->
+  <div class="card-glass avatar-block">
+    <img src="https://files.catbox.moe/your-avatar.jpg" alt="avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23666%22/><text x=%2250%22 y=%2260%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2236%22>?</text></svg>'">
+    <h2>月月子代代雪</h2>
+    <p>一只在互联网冲浪的小透明</p>
+  </div>
+
+  <!-- 星标项目 -->
+  <div class="card-glass">
+    <div class="section-title">⭐ 星标项目</div>
     <div class="link-list">
-        <a href="https://github.com/ylypagehome" target="_blank">🌍 Avenue Project (4th Avenue)</a>
-        <a href="https://github.com/ylypagehome" target="_blank">📅 计划表白板</a>
-        <a href="#">💻 刷课计数</a>
+      <a href="https://github.com/furnian/ylypagehome" target="_blank">📦 ylypagehome — 个人主页源码</a>
+      <a href="https://github.com/yueyuezidaidaixue" target="_blank">🧑💻 我的 GitHub</a>
     </div>
-</div>
+  </div>
 
-<!-- 开源仓库 -->
-<div class="card-glass">
-    <div class="section-title">🌱 开源仓库</div>
+  <!-- 开源仓库 -->
+  <div class="card-glass">
+    <div class="section-title">📂 开源仓库</div>
     <div class="link-list">
-        <a href="#">LeetCode 每日打卡</a>
-        <a href="#">GitHub 练手</a>
+      <a href="https://github.com/furnian?tab=repositories" target="_blank">🔗 全部仓库</a>
     </div>
-</div>
+  </div>
 
-<!-- 其他空间 -->
-<div class="card-glass">
-    <div class="section-title">📁 其他空间</div>
+  <!-- 其他空间 -->
+  <div class="card-glass">
+    <div class="section-title">🌐 其他空间</div>
     <div class="link-list">
-        <a href="#">B站 星系</a>
-        <a href="#">视频空间</a>
-        <a href="#">日程表白板</a>
+      <a href="#" target="_blank">📺 Bilibili</a>
+      <a href="#" target="_blank">🐦 Twitter / X</a>
     </div>
+  </div>
+
+  <!-- 占位空白 -->
+  <div style="height:60px;"></div>
 </div>
 
-<!-- 底部信息 -->
-<div class="footer-card">
-    <span>📅 今日计划 3/5</span>
-    <span>⏰ <span id="datetime"></span></span>
-    <span>❤️ 看板娘</span>
+<!-- 底部信息栏 -->
+<div class="footer-bar">
+  <span>© 2026 月月子代代雪</span>
+  <span id="liveTime">--:--:--</span>
 </div>
 
 <script>
-// 时间更新（原有）
-function updateTime() {
-    document.getElementById("datetime").innerText = new Date().toLocaleString();
+// 关闭弹窗
+function closeModal() {
+  document.getElementById('welcomeModal').style.display = 'none';
 }
-setInterval(updateTime, 1000);
-updateTime();
 
-// === 飘落特效 JS ===
+// 实时时钟
+function updateClock() {
+  const now = new Date();
+  const s = String(now.getHours()).padStart(2,'0') + ':' +
+            String(now.getMinutes()).padStart(2,'0') + ':' +
+            String(now.getSeconds()).padStart(2,'0');
+  document.getElementById('liveTime').textContent = s;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// ========== 飘落特效 ==========
 const names = [
-    "荧","空","雷电将军","胡桃","甘雨","神里绫华","纳西妲","芙宁娜","钟离","温迪","刻晴","可莉","魈","迪卢克","七七",
-    "姬子","布洛妮娅","希儿","银狼","卡芙卡","镜流","黄泉","砂金","飞霄","云璃","流萤","花火","真理医生",
-    "阿米娅","能天使","银灰","陈","煌","史尔特尔","Mon3tr","斯卡蒂","浊心斯卡蒂","伊芙利特",
-    "企业","赤城","加贺","贝尔法斯特","光辉","独角兽","萨拉托加",
-    "日富美","星野","砂狼白子","一之濑未来","小鸟游星野","天童爱丽丝"
+  '雷电将军','纳西妲','芙宁娜','胡桃','甘雨','刻晴','神里绫华','宵宫',
+  '八重神子','妮露','夜兰','申鹤','优菈','可莉','七七','莫娜',
+  '布洛妮娅','希儿','银狼','符玄','镜流','卡芙卡','黑天鹅','花火',
+  '黄泉','知更鸟','流萤','阮·梅','托帕','克拉拉','阿米娅','陈',
+  '能天使','斯卡蒂','W','凯尔希','缪尔赛思','浊心斯卡蒂','归溟幽灵鲨',
+  '企业','贝尔法斯特','克利夫兰','独角兽','长门','赤城','加贺','大凤',
+  '一姬','二阶堂美树','凉宫杏树','藤田佳奈','四宫夏生','小鸟游雏',
+  '白子','星野','爱丽丝','日奈','亚都梨','芹香'
 ];
 
-const container = document.getElementById('snow-container');
-const viewportHeight = window.innerHeight;
-document.documentElement.style.setProperty('--fall-distance', `${viewportHeight}px`);
-
-function createFallingName() {
-    const name = names[Math.floor(Math.random() * names.length)];
-    for (let i = 0; i < name.length; i++) {
-        const char = document.createElement('div');
-        char.className = 'falling-char';
-        char.textContent = name[i];
-        char.style.left = Math.random() * 96 + 2 + '%';
-        const fontSize = Math.random() * 14 + 14;
-        char.style.fontSize = fontSize + 'px';
-        const colors = ['color-pink','color-blue','color-gold','color-green','color-purple','color-cyan'];
-        char.classList.add(colors[Math.floor(Math.random() * colors.length)]);
-        const duration = Math.random() * 8 + 6;
-        char.style.animationDuration = duration + 's';
-        char.style.animationDelay = Math.random() * 1.5 + 's';
-        container.appendChild(char);
-        setTimeout(() => char.remove(), (duration + 2) * 1000);
-    }
+function randomBetween(min, max) {
+  return Math.random() * (max - min) + min;
 }
 
-// 初始生成一批
-for (let i = 0; i < 8; i++) setTimeout(createFallingName, i * 350);
+function spawnName() {
+  const el = document.createElement('div');
+  el.className = 'falling-name';
+  el.textContent = names[Math.floor(Math.random() * names.length)];
+  
+  const fontSize = randomBetween(14, 28);
+  const speed = randomBetween(6, 14);
+  const colors = ['#ffadad','#ffd6a5','#fdffb6','#caffbf','#a0c4ff','#bdb2ff'];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  
+  el.style.left = randomBetween(5, 92) + '%';
+  el.style.fontSize = fontSize + 'px';
+  el.style.color = color;
+  el.style.textShadow = '0 0 12px ' + color.replace('#','rgba(') + ',0.4)';
+  el.style.animationDuration = speed + 's';
+  
+  // 下落距离 = 屏幕高度的 75%
+  const fallDistance = window.innerHeight * 0.78;
+  el.style.setProperty('--fall-dist', fallDistance + 'px');
+  
+  document.body.appendChild(el);
+  
+  // 动画结束后移除
+  setTimeout(() => {
+    if (el.parentNode) el.remove();
+  }, speed * 950);
+}
+
+// 初始生成 10 个
+for (let i = 0; i < 10; i++) {
+  setTimeout(spawnName, i * 180);
+}
+
 // 持续生成
-setInterval(createFallingName, Math.random() * 2100 + 900);
+setInterval(() => {
+  spawnName();
+}, randomBetween(800, 2500));
 </script>
 </body>
 </html>
