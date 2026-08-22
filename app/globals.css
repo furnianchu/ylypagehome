@@ -1,30 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-body {
-  font-family: 'ZCOOL KuaiLe', sans-serif;
-
-
-}
-
-/* 移除之前的 APlayer 样式，改用以下样式 */
-.aplayer.aplayer-fixed {
-  z-index: 50;
-  left: 0;
-}
-
-.aplayer.aplayer-fixed .aplayer-body {
-  backdrop-filter: blur(10px);
-}
-
-.aplayer .aplayer-info .aplayer-music {
-  color: #ec4899;
-}
-
-.aplayer.aplayer-fixed.aplayer-mini .aplayer-body {
-  left: 0;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Noto Sans SC", sans-serif; background: #0d0d0d; min-height: 100vh; color: #fff; overflow-x: hidden; padding: 20px; }
+.container { max-width: 640px; margin: 0 auto; }
+.card-glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 18px; margin-bottom: 16px; box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+.section-title { font-size: 17px; color: #fff; margin-bottom: 12px; border-left: 3px solid #ff6b6b; padding-left: 10px; font-weight: 600; }
+.link-list a { display: block; color: #e0e0e0; text-decoration: none; padding: 10px 12px; margin: 4px 0; border-radius: 10px; background: rgba(255,255,255,0.03); transition: all 0.2s; }
+.link-list a:hover { background: rgba(255,255,255,0.12); transform: translateX(4px); }
+.avatar-block { text-align: center; margin-bottom: 20px; }
+.avatar-block img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.3); }
+.avatar-block h1 { font-size: 24px; margin-top: 12px; }
+.avatar-block p { font-size: 14px; color: #bbb; margin-top: 6px; }
+.footer-bar { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; display: flex; justify-content: space-between; font-size: 12px; color: #ccc; z-index: 999; }
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; z-index: 2000; }
+.modal-box { background: rgba(255,255,255,0.09); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 32px 40px; max-width: 360px; text-align: center; }
+.modal-box h3 { font-size: 20px; margin-bottom: 12px; }
+.modal-box p { font-size: 14px; color: #bbb; line-height: 1.6; margin-bottom: 20px; }
+.modal-btn { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 9px 30px; border-radius: 99px; font-size: 14px; cursor: pointer; }
+.modal-btn:hover { background: rgba(255,255,255,0.22); }
+.falling-name { position: fixed; top: -40px; pointer-events: none; white-space: nowrap; font-weight: 300; opacity: 0.85; z-index: 1500; animation: fallDown linear forwards; }
+@keyframes fallDown { 0% { transform: translateY(0); opacity: 0.95; } 70% { opacity: 0.35; } 100% { opacity: 0; } }
