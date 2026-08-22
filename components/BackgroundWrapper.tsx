@@ -46,7 +46,7 @@ export default function BackgroundWrapper({ children }: { children: React.ReactN
   }, [videoSrc]);
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden z-0">
       <video
         ref={videoRef}
         autoPlay
@@ -58,7 +58,7 @@ export default function BackgroundWrapper({ children }: { children: React.ReactN
         <source src={videoSrc} type="video/mp4" />
       </video>
       <div className="fixed inset-0 -z-10 bg-black/40 backdrop-blur-sm" />
-      {children}
+      <div className="relative z-10">{children}</div>
     </div>
   );
 }
