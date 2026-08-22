@@ -116,12 +116,39 @@ body {
     85% { opacity: 0.6; }
     100% { transform: translateY(calc(var(--fall-distance) * 0.78)) rotate(720deg); opacity: 0; }
 }
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+    z-index: 9999; display: flex; align-items: center; justify-content: center;
+}
+.modal-box {
+    background: rgba(30,30,50,0.85); backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 20px;
+    padding: 30px 36px; text-align: center; color: #fff; max-width: 360px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5); animation: popIn 0.3s ease-out;
+}
+.modal-box .icon { font-size: 48px; margin-bottom: 12px; }
+.modal-box .msg { font-size: 16px; line-height: 1.6; color: #e0e0e0; margin-bottom: 20px; }
+.modal-box button {
+    background: linear-gradient(135deg,#ff69b4,#8a2be2); color: #fff; border: none;
+    padding: 10px 32px; border-radius: 30px; font-size: 15px; cursor: pointer;
+    transition: 0.2s;
+}
+.modal-box button:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,105,180,0.5); }
+@keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 </style>
 </head>
 <body>
 
 <!-- 飘落特效容器 -->
 <div class="falling-container" id="snow-container"></div>
+<div class="modal-overlay" id="welcomeModal">
+  <div class="modal-box">
+    <div class="icon">🚧</div>
+    <div class="msg">网站当前正在搭建中<br/>部分功能暂不可用，敬请期待！</div>
+    <button onclick="document.getElementById("welcomeModal").style.display="none"">我知道了</button>
+  </div>
+</div>
 
 <div class="avatar-block">
     <img src="https://files.catbox.moe/your-avatar-image.png" alt="头像">
