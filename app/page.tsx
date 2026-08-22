@@ -12,9 +12,9 @@ const NAMES = [
 
 export default function HomePage() {
   const [showModal, setShowModal] = useState(true);
+  const [avatarOk, setAvatarOk] = useState(true);
 
   useEffect(() => {
-    // 飘落特效
     function spawn() {
       const el = document.createElement("div");
       el.className = "falling-name";
@@ -25,16 +25,15 @@ export default function HomePage() {
       el.style.color = colors[Math.floor(Math.random() * colors.length)];
       el.style.animationDuration = Math.random() * 8 + 6 + "s";
       document.body.appendChild(el);
-      setTimeout(() => el.remove(), 14000);
+      setTimeout(() => el.remove(), 14500);
     }
-    for (let i = 0; i < 10; i++) setTimeout(spawn, i * 200);
-    const interval = setInterval(spawn, Math.random() * 1700 + 900);
+    for (let i = 0; i < 10; i++) setTimeout(spawn, i * 130);
+    const interval = setInterval(spawn, Math.random() * 1400 + 800);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      {/* 搭建提示弹窗 */}
       {showModal && (
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
           <div className="modal-box">
@@ -46,21 +45,20 @@ export default function HomePage() {
       )}
 
       <div className="container">
-        {/* 头像卡片 */}
         <div className="card-glass avatar-block">
-          <img
-            src="https://files.catbox.moe/your-avatar.jpg"
-            alt="avatar"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src =
-                "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23666%22/><text x=%2250%22 y=%2260%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2236%22>?</text></svg>";
-            }}
-          />
+          {avatarOk ? (
+            <img
+              src="/avatar.jpg"
+              alt="avatar"
+              onError={() => setAvatarOk(false)}
+            />
+          ) : (
+            <div className="avatar-placeholder">月</div>
+          )}
           <h1>月月子代代雪</h1>
           <p>热爱技术，热爱生活的探索者</p>
         </div>
 
-        {/* 星标项目 */}
         <div className="card-glass">
           <div className="section-title">⭐ 星标项目</div>
           <div className="link-list">
@@ -69,7 +67,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* 开源仓库 */}
         <div className="card-glass">
           <div className="section-title">📂 开源仓库</div>
           <div className="link-list">
@@ -77,7 +74,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* 其他空间 */}
         <div className="card-glass">
           <div className="section-title">🌐 其他空间</div>
           <div className="link-list">
@@ -86,10 +82,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div style={{ height: 60 }}></div>
+        <div style={{ height: 68 }}></div>
       </div>
 
-      {/* 底部信息栏 */}
       <div className="footer-bar">
         <span>© 2026 月月子代代雪</span>
         <LiveClock />
@@ -104,11 +99,9 @@ function LiveClock() {
     const tick = () => {
       const d = new Date();
       setTime(
-        String(d.getHours()).padStart(2, "0") +
-          ":" +
-          String(d.getMinutes()).padStart(2, "0") +
-          ":" +
-          String(d.getSeconds()).padStart(2, "0")
+        String(d.getHours()).padStart(2,"0") + ":" +
+        String(d.getMinutes()).padStart(2,"0") + ":" +
+        String(d.getSeconds()).padStart(2,"0")
       );
     };
     tick();
