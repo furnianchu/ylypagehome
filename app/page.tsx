@@ -20,15 +20,15 @@ export default function HomePage() {
       el.className = "falling-name";
       el.textContent = NAMES[Math.floor(Math.random() * NAMES.length)];
       const colors = ["#ffadad","#ffd6a5","#fdffb6","#caffbf","#a0c4ff","#bdb2ff"];
-      el.style.left = Math.random() * 88 + 4 + "%";
+      el.style.left = Math.random() * 90 + 5 + "%";
       el.style.fontSize = Math.random() * 14 + 14 + "px";
       el.style.color = colors[Math.floor(Math.random() * colors.length)];
       el.style.animationDuration = Math.random() * 8 + 6 + "s";
       document.body.appendChild(el);
-      setTimeout(() => el.remove(), 14500);
+      setTimeout(() => el.remove(), 14600);
     }
-    for (let i = 0; i < 10; i++) setTimeout(spawn, i * 130);
-    const interval = setInterval(spawn, Math.random() * 1400 + 800);
+    for (let i = 0; i < 10; i++) setTimeout(spawn, i * 180);
+    const interval = setInterval(spawn, Math.random() * 1500 + 700);
     return () => clearInterval(interval);
   }, []);
 
@@ -82,7 +82,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div style={{ height: 68 }}></div>
+        <div style={{ height: 80 }}></div>
       </div>
 
       <div className="footer-bar">
